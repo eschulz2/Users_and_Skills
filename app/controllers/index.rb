@@ -44,6 +44,11 @@ get '/users/new' do
   erb :sign_up
 end
 
+get '/update/:user_id' do
+  erb :update
+end
+
+
 post '/users' do
   # sign-up
   @user = User.new params[:user]

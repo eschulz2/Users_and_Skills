@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Update</h1>
+
+
+
+  <form action="/skills" method="post">
+    <% skills = [] %>
+    <% Skill.all.each do |skill| %>
+      
+      <input type="checkbox" name="<%=skill.name%>[name]"><%=skill.name%><br>
+      
+    <% end %>
+    <br>
+    <input type="submit" value="Update your skills">
+  </form>
+
+
+
+</div>

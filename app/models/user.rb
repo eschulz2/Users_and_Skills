@@ -23,4 +23,6 @@ class User < ActiveRecord::Base
     nil # either invalid email or wrong password
   end
 
+  has_many :proficiencies
+  has_many :skills, through: :proficiencies
 end

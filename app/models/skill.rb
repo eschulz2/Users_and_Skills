@@ -9,4 +9,7 @@ class Skill < ActiveRecord::Base
     p self.context
     self.errors[:context] = "must be one of: #{VALID_CONTEXTS.join(', ')}" unless VALID_CONTEXTS.include? self.context
   end
+
+  has_many :proficiencies
+  has_many :users, through: :proficiencies
 end
